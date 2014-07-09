@@ -1,0 +1,9 @@
+<p>Demo for the <a href="https://github.com/hexorx/countries">Countries</a> gem.</p>
+<% @countries.each do |country| %>
+  <h2><%= country %></h2>
+  <ul>
+    <% country.subdivisions.each do |sub| %>
+      <li><%= sub.last['name'] %> - <%= sub.first %></li>
+    <% end %>
+  </ul>
+<% end %>
